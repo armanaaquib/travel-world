@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel World</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
+        <span class="navbar-brand mb-0 h1">Travel World</span>
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Book</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                    Packages
+                </a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">United States</a>
+                    <a class="dropdown-item" href="#">India</a>
+                    <a class="dropdown-item" href="#">France</a>
+                    <a class="dropdown-item" href="#">Germany</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Services</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Gallery</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+            </li>
+        </ul>
+        <form class="d-flex">
+            <button class="btn btn-outline-dark mr-2" type="button" data-toggle="modal" data-target="#loginModal">Login</button>
+            <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="loginModalLabel">Login</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form id="login-form" method="post" action="./index.html">
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email Id</label>
+                                    <input type="email" class="form-control" id="email" name="email" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="password" class="form-label">Password</label>
+                                    <input type="password" class="form-control" id="password" name="password" required>
+                                </div>
+                                <button type="submit" class="btn btn-outline-dark">Login</button>
+                                <p class="mt-2">Don't have an account? <a href="register.html">Register</a></p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="btn btn-outline-dark" type="button" data-toggle="modal" data-target="#registerModal">Register</button>
+            <div class="modal fade" id="registerModal" tabindex="-1" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="registerModalLabel">Register</h5>
+                            <button type="button" class="close" data-dismiss="modal">
+                                <span>&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form id="registration-form" method="post" action="./login.html">
+                                <div class="mb-3">
+                                    <label for="fullname" class="form-label">Full Name</label>
+                                    <input type="text" class="form-control" id="fullname" name="fullname" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="contact" class="form-label">Contact</label>
+                                    <input type="tel" class="form-control" id="contact" name="contact" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="dob" class="form-label">Date of Birth</label>
+                                    <input type="date" class="form-control" id="dob" name="dob" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email Id</label>
+                                    <input type="email" class="form-control" id="email" name="email" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="password" class="form-label">Password</label>
+                                    <input type="password" class="form-control" id="password" name="password" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="gender" class="form-label">Gender</label>
+                                    <select class="form-select" id="gender" name="gender" required>
+                                        <option value="">Select Gender</option>
+                                        <option value="male">Male</option>
+                                        <option value="female">Female</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                                <button class="btn btn-outline-dark" type="submit">Register</button>
+                                <p class="mt-2">Already have an account? <a href="login.html">Login</a></p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </nav>
+
+    <div class="d-flex align-items-center justify-content-center background-image">
+        <div class="text-center">
+            <h2 class="display-4 mb-5">Welcome to Travel World</h2>
+            <h2 class="display-2 mb-0">Visit</h2>
+            <div class="carousel slide mt-0 mb-5" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <h2 class="display-2">United States</h2>
+                    </div>
+                    <div class="carousel-item">
+                        <h2 class="display-2">India</h2>
+                    </div>
+                    <div class="carousel-item">
+                        <h2 class="display-2">France</h2>
+                    </div>
+                    <div class="carousel-item">
+                        <h2 class="display-2">Germany</h2>
+                    </div>
+                    <div class="carousel-item">
+                        <h2 class="display-2">Canada</h2>
+                    </div>
+                    <div class="carousel-item">
+                        <h2 class="display-2">Thailand</h2>
+                    </div>
+                </div>
+             </div>
+            <button class="btn btn-outline-dark btn-lg" type="button">Book Now</button>
+        </div>
+    </div>
+
+   <section>
+    <div class="container booking-form-container">
+        <div class="row">
+            <div class="col-md-6 mt-2">
+                <img src="./images/travel.jpg" alt="Company Logo" height="100%" width="100%">
+            </div>
+            <div class="col-md-6" width="50%">
+                <form class="m-2 booking-form" id="booking-form">
+                    <div class="form-group">
+                        <label for="whereTo">Where to</label>
+                        <select class="form-control" id="whereTo" required>
+                          <option>United States</option>
+                          <option>India</option>
+                          <option>France</option>
+                          <option>Canada</option>
+                          <option>Thailand</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="howManyPerson">How Many Person</label>
+                        <input type="number" min="1" class="form-control" id="howManyPerson" required>
+                      </div>
+                      <div class="form-group">
+                        <label for="startDate">Start Date</label>
+                        <input type="date" class="form-control" id="startDate" onchange="updateEndDate()" required>
+                      </div>
+                      <div class="form-group">
+                        <label for="endDate">End Date</label>
+                        <input type="date" class="form-control" id="endDate" required>
+                      </div>
+                      <div class="form-group">
+                        <label for="description">Description</label>
+                        <textarea class="form-control" id="description" minlength="50" maxlength="500" required></textarea>
+                      </div>
+                      <button class="btn btn-outline-dark btn-lg" type="submit">Book Now</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    </section>
+
+    <div class="m-4 text-center">
+        <h2 class="display-5">Packages</h2>
+        <hr width="20%"/>
+        <div class="d-flex flex-wrap justify-content-around">
+            <div class="card mt-4" style="width: 25rem;">
+                <img src="https://plus.unsplash.com/premium_photo-1714051660720-888e8454a021?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8ZnJlZSUyMGltYWdlcyUyME5ldyUyMFlvcmslMjBDaXR5fGVufDB8fDB8fHww" class="card-img-top" alt="...">
+                <div class="mt-2" id="rating">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star"></i>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">New York City</h5>
+                  <p class="card-text">A bustling metropolis known for its iconic landmarks, cultural attractions, and diverse neighborhoods.</p>
+                  <div class="d-flex justify-content-between">
+                    <h4>$ 200</h4>
+                    <button class="btn btn-outline-dark btn-sm" type="button">Book Now</button>
+                  </div>
+                </div>
+            </div>
+            <div class="card mt-4" style="width: 25rem;">
+                <img src="https://images.unsplash.com/photo-1623676632925-bff8c60b4dc8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGZyZWUlMjBpbWFnZXMlMjBBZ3JhfGVufDB8fDB8fHww" class="card-img-top" alt="...">
+                <div class="mt-2" id="rating">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Agra</h5>
+                  <p class="card-text">A historic city famous for the Taj Mahal, a UNESCO World Heritage Site.</p>
+                  <div class="d-flex justify-content-between">
+                    <h4>$ 100</h4>
+                    <button class="btn btn-outline-dark btn-sm" type="button">Book Now</button>
+                  </div>
+                </div>
+            </div>
+            <div class="card mt-4" style="width: 25rem;">
+                <img src="https://images.unsplash.com/photo-1706792535224-8ab10e104a85?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGZyZWUlMjBpbWFnZXMlMjBrZXJhbGF8ZW58MHx8MHx8fDA%3D" class="card-img-top" alt="...">
+                <div class="mt-2" id="rating">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-half"></i>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Kerala</h5>
+                  <p class="card-text">A southern state known for its beautiful backwaters, Ayurvedic treatments, and vibrant culture.</p>
+                  <div class="d-flex justify-content-between">
+                    <h4>$ 100</h4>
+                    <button class="btn btn-outline-dark btn-sm" type="button">Book Now</button>
+                  </div>
+                </div>
+            </div>
+            <div class="card mt-4" style="width: 25rem;">
+                <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8ZnJlZSUyMGltYWdlcyUyMFBhcmlzfGVufDB8fDB8fHww" class="card-img-top" alt="...">
+                <div class="mt-2" id="rating">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star"></i>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Paris</h5>
+                  <p class="card-text">The capital of France, known for its romantic atmosphere, iconic landmarks like the Eiffel Tower, and world-class museums.</p>
+                  <div class="d-flex justify-content-between">
+                    <h4>$ 110</h4>
+                    <button class="btn btn-outline-dark btn-sm" type="button">Book Now</button>
+                  </div>
+                </div>
+            </div>
+            <div class="card mt-4" style="width: 25rem;">
+                <img src="https://images.unsplash.com/photo-1473951574080-01fe45ec8643?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8ZnJlZSUyMGltYWdlcyUyME5pY2UlMjBGcmFuY2V8ZW58MHx8MHx8fDA%3D" class="card-img-top" alt="...">
+                <div class="mt-2" id="rating">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-half"></i>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Nice</h5>
+                  <p class="card-text">A coastal city on the French Riviera, famous for its beautiful beaches, Promenade des Anglais, and vibrant nightlife.</p>
+                  <div class="d-flex justify-content-between">
+                    <h4>$ 100</h4>
+                    <button class="btn btn-outline-dark btn-sm" type="button">Book Now</button>
+                  </div>
+                </div>
+            </div>
+            <div class="card mt-4" style="width: 25rem;">
+                <img src="https://images.unsplash.com/photo-1552553302-9211bf7f7053?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGZyZWUlMjBpbWFnZXMlMjBCZXJsaW58ZW58MHx8MHx8fDA%3D" class="card-img-top" alt="...">
+                <div class="mt-2" id="rating">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star"></i>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Berlin</h5>
+                  <p class="card-text">The capital of Germany, a city with a rich history, vibrant culture, and modern architecture.</p>
+                  <div class="d-flex justify-content-between">
+                    <h4>$ 200</h4>
+                    <button class="btn btn-outline-dark btn-sm" type="button">Book Now</button>
+                  </div>
+                </div>
+            </div>
+            <div class="card mt-4" style="width: 25rem;">
+                <img src="https://images.unsplash.com/photo-1495469118433-d4dbeb29963a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8ZnJlZSUyMGltYWdlcyUyMExhcyUyMFZlZ2FzfGVufDB8fDB8fHww" class="card-img-top" alt="...">
+                <div class="mt-2" id="rating">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-half"></i>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Las Vegas</h5>
+                  <p class="card-text">A popular tourist destination known for its casinos, entertainment shows, and luxurious hotels.</p>
+                  <div class="d-flex justify-content-between">
+                    <h4>$ 100</h4>
+                    <button class="btn btn-outline-dark btn-sm" type="button">Book Now</button>
+                  </div>
+                </div>
+            </div>
+            <div class="card mt-4" style="width: 25rem;">
+                <img src="https://images.unsplash.com/photo-1642922835816-e2ac68db5c42?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZnJlZSUyMGltYWdlcyUyMEdvYXxlbnwwfHwwfHx8MA%3D%3D" class="card-img-top" alt="...">
+                <div class="mt-2" id="rating">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-half"></i>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Goa</h5>
+                  <p class="card-text">A coastal state known for its beaches, Portuguese influence, and vibrant nightlife.</p>
+                  <div class="d-flex justify-content-between">
+                    <h4>$ 190</h4>
+                    <button class="btn btn-outline-dark btn-sm" type="button">Book Now</button>
+                  </div>
+                </div>
+            </div>
+            <div class="card mt-4" style="width: 25rem;">
+                <img src="https://images.unsplash.com/photo-1696426886039-a3b5c8774e3d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGZyZWUlMjBpbWFnZXMlMjBEYXJqZWVsaW5nfGVufDB8fDB8fHww" class="card-img-top" alt="...">
+                <div class="mt-2" id="rating">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Darjeeling</h5>
+                  <p class="card-text">A hill station in West Bengal, known for its tea plantations, Himalayan views, and Tibetan culture.</p>
+                  <div class="d-flex justify-content-between">
+                    <h4>$ 90</h4>
+                    <button class="btn btn-outline-dark btn-sm" type="button">Book Now</button>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container text-center mb-4">
+    <h2 class="display-5 mt-4">Our Services</h2>
+    <hr width="12%"/>
+    <div class="row mt-4">
+        <div class="col-md-4">
+            <h5 class="text-center">Affordable Hotel</h5>
+        </div>
+        <div class="col-md-4">
+            <h5 class="text-center">Food & Drinks</h5>
+        </div>
+        <div class="col-md-4">
+            <h5 class="text-center">Safety Guide</h5>
+        </div>
+    </div>
+    <div class="row mt-4">
+        <div class="col-md-4">
+            <h5 class="text-center">Transportation Services</h5>
+        </div>
+        <div class="col-md-4">
+            <h5 class="text-center">Event Planning</h5>
+        </div>
+        <div class="col-md-4">
+            <h5 class="text-center">Customer Support</h5>
+        </div>
+    </div>
+    </div>
+
+    <section id="gallery">
+        <div class="container">
+            <h2 class="section-title">Gallery</h2>
+            <hr width="12%"/>
+            <div class="row">
+                <div class="col-md-4 gallery-item">
+                    <img src="https://plus.unsplash.com/premium_photo-1694475335011-c2d9e97b1714?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8ZnJlZSUyMGluZGlhbiUyMHBlb3BsZSUyMHRyYXZlbGxpbmd8ZW58MHx8MHx8fDA%3D" alt="Taj Mahal" class="img-fluid">
+                    <p class="gallery-caption">Taj Mahal</p>
+                </div>
+                <div class="col-md-4 gallery-item">
+                    <img src="https://media.istockphoto.com/id/1409035632/photo/father-and-daughter-walking-in-a-forest-in-fog.webp?a=1&b=1&s=612x612&w=0&k=20&c=VKxyVn2LqQvo5n9VLzAynV0P0kBOIy9YdmeXO48KQOY=" alt="Forest" class="img-fluid">
+                    <p class="gallery-caption">Forest</p>
+                </div>
+                <div class="col-md-4 gallery-item">
+                    <img src="https://media.istockphoto.com/id/1135673381/photo/indian-family-at-street-market.webp?a=1&b=1&s=612x612&w=0&k=20&c=Rju0I8XclvQZve8LP0Bx9VW2D7rQFTzMWPMKT_Ax708=" alt="Family" class="img-fluid">
+                    <p class="gallery-caption">Family Time</p>
+                </div>
+                <div class="col-md-4 gallery-item">
+                    <img src="https://images.unsplash.com/photo-1730484976453-c6657e01df5c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyfHx8ZW58MHx8fHx8" alt="Lake" class="img-fluid">
+                    <p class="gallery-caption">Lake</p>
+                </div>
+                <div class="col-md-4 gallery-item">
+                    <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTN8fHRyYXZlbHxlbnwwfDB8MHx8fDA%3D" alt="Mountains" class="img-fluid">
+                    <p class="gallery-caption">Mountains</p>
+                </div>
+                <div class="col-md-4 gallery-item">
+                    <img src="https://images.unsplash.com/photo-1489493585363-d69421e0edd3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDZ8fHRyYXZlbHxlbnwwfDB8MHx8fDA%3D" alt="Camel" class="img-fluid">
+                    <p class="gallery-caption">Camels on desert</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about-us">
+        <div class="container">
+            <h2 class="section-title">About Us</h2>
+            <hr width="12%"/>
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="./images/travel.jpg" alt="Company Logo" class="img-fluid">
+                </div>
+                <div class="col-md-6">
+                    <p>We are a dynamic and innovative company dedicated to people. Established in 2023, we have been providing services to our valued customers. Our team of experts is passionate about travel, and we strive to deliver exceptional quality and service.</p>
+                    <p><strong>Established:</strong> 2023</p>
+                    <p><strong>Location:</strong> Hyderabad, India</p>
+                    <p><strong>Mission:</strong> To provide innovative solutions and exceptional customer service.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer">
+        <div class="container">
+            <h3>Travel World</h3>
+            <ul class="social-icons">
+                <li><a href="#"><i class="bi bi-youtube mr-2"></i></a></li>
+                <li><a href="#"><i class="bi bi-facebook mr-2"></i></a></li> 
+                <li><a href="#"><i class="bi bi-instagram"></i></a></li> 
+            </ul>
+            <p>&copy; 2023 Travel World. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="./js/script.js"></script>
+    <script>
+        setMinValue();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+</body>
+</html>
