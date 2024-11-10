@@ -19,7 +19,7 @@ const updateEndDate = () => {
 
     selectedDate.setDate(selectedDate.getDate() + 7);
     endDate.value = selectedDate.toISOString().slice(0, 10);
-  }
+}
 
 document.getElementById("booking-form").addEventListener("submit", (event) => {
     event.preventDefault();   
